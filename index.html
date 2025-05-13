@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My E-Commerce Platform</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <a href="#home" class="nav-item">🏠 Home</a>
+    <a href="#collection" class="nav-item">🛍️ Collection</a>
+    <a href="#new" class="nav-item">✨ New</a>
+    <a href="#checkout" class="nav-item">💳 Checkout</a>
+
+    <!-- User account links  -->
+    <span id="nav-user" class="nav-user">
+      <a href="#login" id="login-link">Login</a> / <a href="#register" id="register-link">Register</a>
+    </span>
+    <span id="nav-logout" class="nav-user" style="display: none;">
+      Hello, <strong id="nav-username"></strong> – <a href="#" id="logout-link">Logout</a>
+    </span>
+  </nav>
+
+  <!-- Container with side menu and main content -->
+  <div class="container">
+    <!-- Side category menu -->
+    <aside id="sidebar" class="sidebar">
+    </aside>
+
+    <!-- Main content area where pages will be rendered -->
+    <main id="main-view">
+      <!-- Content gets injected here by script.js based on the current route -->
+    </main>
+  </div>
+
+  <!-- Chart.js library for data visualization (loaded from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Main JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

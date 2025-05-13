@@ -1,0 +1,425 @@
+/* Global Styles and Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    background: #f9f9f9;
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hidden { display: none !important; }
+  
+  /* Top Navigation Bar */
+  .top-nav {
+    background-color: #343a40; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    /* make nav sticky if desired: position: fixed; top: 0; width: 100%; */
+  }
+  .top-nav .nav-item {
+    margin-right: 1.5em;
+    font-size: 1rem;
+  }
+  .top-nav .nav-item:hover {
+    text-decoration: underline;
+  }
+  /* Push the user links (login/logout) to the right end */
+  .top-nav .nav-user {
+    margin-left: auto;
+  }
+  .top-nav a {
+    color: #fff;
+  }
+  
+  /* Container for sidebar + main content */
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
+  /* Sidebar styles */
+  .sidebar {
+    background: #fff;
+    border-right: 1px solid #ddd;
+    width: 200px;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .sidebar .category-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75em 0;
+    color: #555;
+  }
+  .sidebar .category-link .icon {
+    font-size: 1.5em;
+  }
+  .sidebar .category-link .label {
+    margin-top: 0.25em;
+    font-size: 0.9em;
+  }
+  .sidebar .category-link:hover {
+    background: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  /* Main content area */
+  #main-view {
+    flex: 1;
+    padding: 1em;
+  }
+  /* Page section styles */
+  #main-view h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    color: #333;
+  }
+  #main-view p {
+    margin-bottom: 1em;
+  }
+  
+  /* Product Grid on listing pages  */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+  }
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5em;
+    text-align: center;
+    transition: box-shadow 0.3s;
+  }
+  .product-card:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  .product-card img {
+    width: 100px;
+    height: auto;
+  }
+
+  .product-card .name {
+    font-weight: bold;
+    margin: 0.5em 0 0.25em;
+  }
+  .product-card .price {
+    color: #e91e63;  
+    margin-bottom: 0.5em;
+  }
+  .product-card .new-label {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-bottom: 0.5em;
+  }
+  .product-card button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em 0.75em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .product-card button:hover {
+    background: #0056b3;
+  }
+  
+  /* Product Detail Page */
+  .product-detail {
+    display: flex;
+    gap: 2em;
+    align-items: flex-start;
+    flex-wrap: wrap;  /* allow stacking on small screens */
+  }
+  .product-detail img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .product-detail .details {
+    flex: 1;
+    max-width: 500px;
+  }
+  .product-detail .details h2 {
+    border: none;
+    margin-bottom: 0.5em;
+  }
+  .product-detail .details .price {
+    font-size: 1.25em;
+    color: #e91e63;
+    margin: 0.5em 0;
+  }
+  .product-detail .details p {
+    margin-bottom: 1em;
+  }
+  .product-detail .details button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1em;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .product-detail .details button:hover {
+    background: #1e7e34;
+  }
+  
+  /* Cart Page */
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+  }
+  .cart-table th, .cart-table td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    text-align: left;
+  }
+  .cart-table th {
+    background: #f0f0f0;
+  }
+  .cart-table td img {
+    max-width: 50px;
+    height: auto;
+  }
+  .cart-table .item-name {
+    font-weight: bold;
+  }
+  .cart-table .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  .cart-table .quantity-controls button {
+    background: #ddd;
+    border: none;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .cart-table .quantity-controls span {
+    margin: 0 0.5em;
+  }
+  .cart-table .remove-btn {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.25em 0.5em;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .cart-table .remove-btn:hover {
+    background: #c82333;
+  }
+  .cart-total {
+    text-align: right;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+  }
+  .cart-total strong {
+    margin-left: 1em;
+  }
+  
+  /* Checkout Form */
+  .checkout-form {
+    max-width: 400px;
+  }
+  .checkout-form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+  }
+  .checkout-form input {
+    width: 100%;
+    padding: 0.4em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .checkout-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  .checkout-form .form-section {
+    margin-bottom: 1em;
+  }
+  .checkout-form .form-section h3 {
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+    color: #333;
+  }
+  .checkout-form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .checkout-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Order Confirmation */
+  .order-confirmation {
+    max-width: 500px;
+    padding: 1em;
+    background: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+  }
+  .order-confirmation h2 {
+    color: #28a745;
+  }
+  .order-confirmation p {
+    margin: 0.5em 0;
+  }
+  
+  /* Orders List (User Dashboard) */
+  .orders-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+  }
+  .orders-list th, .orders-list td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+  }
+  .orders-list th {
+    background: #f0f0f0;
+  }
+  .orders-list td a {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  .orders-list td a:hover {
+    text-decoration: none;
+  }
+  
+  /* Admin Dashboard */
+  .admin-dashboard {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  }
+  .metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  .metric-card {
+    flex: 1 1 150px;
+    background: #17a2b8;
+    color: #fff;
+    padding: 1em;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .metric-card h3 {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-weight: normal;
+  }
+  .metric-card .metric-value {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  #salesChart {
+    max-width: 100%;
+    margin: 1em 0;
+  }
+  .admin-tables {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+  .admin-tables .table-container {
+    flex: 1 1 300px;
+    max-width: 100%;
+    overflow-x: auto;  /* allow horizontal scroll on small screens */
+  }
+  .admin-tables table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .admin-tables th, .admin-tables td {
+    border: 1px solid #ccc;
+    padding: 0.4em;
+    font-size: 0.95em;
+  }
+  .admin-tables th {
+    background: #e9ecef;
+  }
+  .admin-tables .actions button {
+    margin-right: 0.5em;
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  .admin-tables .edit-btn {
+    background: #ffc107;
+    border: none;
+    color: #212529;
+    border-radius: 3px;
+  }
+  .admin-tables .delete-btn {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+  }
+  .admin-tables .edit-btn:hover {
+    background: #e0a800;
+  }
+  .admin-tables .delete-btn:hover {
+    background: #c82333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .sidebar {
+      /* hide sidebar on small screens or convert to top menu */
+      display: none;
+    }
+    .top-nav .nav-item {
+      margin-right: 1em;
+      font-size: 0.9rem;
+    }
+    .metrics {
+      flex-direction: column;
+    }
+    .metric-card {
+      margin-bottom: 0.5em;
+    }
+  }
+  
