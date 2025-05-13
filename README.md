@@ -33,12 +33,12 @@ A fully client-side e-commerce web application built using HTML, CSS, and JavaSc
 
 1. **Clone or Download the Project**
    ```
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone    https://github.com/Hajaralmatrooshi2020/E-Commerce-Platform-.git ,,,,,,
    ```
 
 2. **Navigate to the project folder**
    ```
-   cd your-repo-name
+   cd 
    ```
 
 3. **Open `index.html` in your browser**
@@ -69,7 +69,7 @@ A fully client-side e-commerce web application built using HTML, CSS, and JavaSc
 
 ## 📷 Screenshots
 
-Add screenshots here if desired (e.g., UI home, admin dashboard, cart view).
+Attached
 
 ---
 
@@ -80,18 +80,3 @@ Add screenshots here if desired (e.g., UI home, admin dashboard, cart view).
 - Admin access is hardcoded based on the `isAdmin` property in the user object.
 
 ---
-
-## 📤 Deploying to GitHub Pages
-
-1. Push your repo to GitHub.
-2. Go to **Settings > Pages**, choose branch = `main` and folder = `/root`.
-3. Your app will be live at:
-   ```
-   https://your-username.github.io/your-repo-name/
-   ```
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).

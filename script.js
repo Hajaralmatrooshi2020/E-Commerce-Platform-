@@ -315,7 +315,6 @@ function saveToStorage(key, value) {
     alert("Added to cart!");
 
 
-    alert("Added to cart!");
 location.hash = "#cart";  // Force user to cart view
 
 
